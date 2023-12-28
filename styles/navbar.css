@@ -1,0 +1,31 @@
+body {
+    background-color: #2c2f33;
+    color: white
+}
+
+header {
+    text-align: center;
+}
+
+#header-container {
+    background-color: rgb(170, 2, 2);
+    color: white
+}
+
+.links {
+    display: inline;
+}
+
+.anchors {
+    position: relative;
+    font-size: 18px;
+    color: white;
+}
+
+#brand {
+    float: left;
+}
+
+#account {
+    float: right;
+}

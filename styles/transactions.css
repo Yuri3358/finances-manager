@@ -1,0 +1,42 @@
+#transactions-container {
+    width: 10cm;
+    height: 8cm;
+    background-color: rgb(38, 38, 38);
+    border: 1px groove black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.27);
+    text-align: center;
+    margin: auto;
+    border-radius: 2px;
+}
+
+.transactions-labels {
+    font-size: 20px;
+}
+
+.transactions-inputs {
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#transaction-name {
+    width: 6cm;
+}
+
+#transaction-amount {
+    width: 2cm
+}
+
+#transaction-type {
+    width: 5cm;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#register-transactions {
+    font-size: 15px;
+    margin-top: 20px;
+}

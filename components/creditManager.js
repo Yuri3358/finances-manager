@@ -1,0 +1,3 @@
+const creditManager = {
+    template: creditManagerTemp
+}
