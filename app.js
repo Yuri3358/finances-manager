@@ -1,7 +1,7 @@
 const app = Vue.createApp({})
 
 const routes = [
-    {path: "/", component: navBar},
+    {path: "/", component: accountManager},
     {path: "/credit", component: creditManager },
     {path: "/transactions", component: transactions},
     {path: "/statement", component: bankStatement},
