@@ -1,0 +1,34 @@
+.table {
+    background-color: rgb(175, 175, 175);
+    width: 20cm;
+    text-align: center;
+}
+
+.bi-eye-slash-fill {
+    color: white;
+    margin-left: 4px;
+}
+
+#current-wealth {
+    text-align: center;
+}
+
+#table-container {
+    margin: auto;
+    overflow: auto;
+    height: 430px;
+    width: 20.4cm
+}
+
+thead {
+    background-color: rgb(63, 63, 70);
+    font-size: 20px;
+}
+
+th {
+    color: white;
+}
+
+td {
+    font-size: 18px;
+}
