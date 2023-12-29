@@ -36,9 +36,7 @@ const bankStatement = {
             transactions.forEach(doc => bankData.push(doc.data()))
 
             this.transactionsList.value = bankData
-            console.log(this.transactionsList.value)
         }
-
     }
 }
 
