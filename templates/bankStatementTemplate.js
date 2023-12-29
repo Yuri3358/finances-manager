@@ -1,5 +1,5 @@
 const bankStatementTemp = `
-    <h2 id="current-wealth">Saldo Atual: <span ref="wealth">R$---</span>
+    <h2 id="current-wealth">Saldo Atual: <span ref="wealth">{{currentWealth}}</span>
         <i class="bi bi-eye-slash-fill" @click="hideAccountCredit"></i>
     </h2>
 
@@ -13,11 +13,11 @@ const bankStatementTemp = `
             </thead>
 
             <tbody>
-                <tr>
-                    <td>McDonalds</td>
-                    <td>R$100,00</td>
-                    <td>Saída</td>
-                    <td>23-12-2024</td>
+                <tr v-for="transaction in this.transactionsList.value">
+                    <td>{{transaction.transaction}}</td>
+                    <td>{{transaction.value.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
+                    <td>{{transaction.type}}</td>
+                    <td>{{transaction.date}}</td>
                 </tr>
             </tbody>
         </table>
