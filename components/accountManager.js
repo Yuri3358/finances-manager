@@ -16,7 +16,6 @@ const accountManager = {
 
                 await colRef.doc(credentials.user.uid).collection("transactions").add({})
 
-                window.location.href = "#/credit"
             } else {
                 alert("Verifique as informações!")
             }
