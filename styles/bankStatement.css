@@ -33,6 +33,10 @@ td {
     font-size: 18px;
 }
 
+#infos-container, #export-excel {
+    text-align: center;
+}
+
 @media (max-width: 700px) {
     .table {
         width: 10cm;
@@ -49,5 +53,9 @@ td {
 
     td {
         font-size: 14px;
+    }
+
+    #export-excel {
+        font-size: 20px;
     }
 }

@@ -36,6 +36,12 @@ const bankStatement = {
             transactions.forEach(doc => bankData.push(doc.data()))
 
             this.transactionsList.value = bankData
+        },
+        exportExcel(){
+            const table = document.getElementById("transaction-table")
+            const workbook = XLSX.utils.table_to_book(table)
+
+            XLSX.writeFile(workbook, "transactions.xlsx")
         }
     }
 }
