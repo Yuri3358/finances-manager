@@ -2,7 +2,6 @@ const app = Vue.createApp({})
 
 async function handleNavigation() {
     firebase.auth().onAuthStateChanged((user) => {
-        console.log(user)
         if (!user) {
             window.location.href = "#/account"
             return false
