@@ -11,6 +11,7 @@ firebase.initializeApp(firebaseConfig)
 
 const db = firebase.firestore()
 const autho = firebase.auth()
+autho.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
 const colRef = db.collection("accounts")
 
 exports = {colRef, autho}

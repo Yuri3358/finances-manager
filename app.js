@@ -1,12 +1,15 @@
 const app = Vue.createApp({})
 
-function handleNavigation() {
-    if (!firebase.auth().currentUser) {
-        alert("Você precisa estar logado!")
-        return false
-    } else {
-        return true
-    }
+async function handleNavigation() {
+    firebase.auth().onAuthStateChanged((user) => {
+        console.log(user)
+        if (!user) {
+            window.location.href = "#/account"
+            return false
+        } else {
+            return true
+        }
+    })
 }
 const routes = [
     {path: "/", component: accountManager},
