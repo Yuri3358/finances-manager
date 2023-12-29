@@ -29,3 +29,17 @@ header {
 #account {
     float: right;
 }
+
+@media (max-width: 700px) {
+    header {
+        width: 11.5cm;
+        display: inline-flexbox;
+    }
+    .anchors, ul {
+        font-size: 16px;
+    }
+
+    #brand, #account {
+        float: none;
+    }
+}

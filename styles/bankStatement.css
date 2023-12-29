@@ -32,3 +32,22 @@ th {
 td {
     font-size: 18px;
 }
+
+@media (max-width: 700px) {
+    .table {
+        width: 10cm;
+    }
+
+    #table-container {
+        width: 10cm;
+        height: 230px;
+    }
+
+    thead {
+        font-size: 22px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+}

@@ -4,7 +4,7 @@ const creditManagerTemp = `
         <label id="credit-label" for="credit-input">Novo saldo da conta</label>
         <input id="credit-input" placeholder="R$" type="number" v-model="newAmount">
 
-        <button class="btn btn-success" @click="setCredit">Registrar Saldo</button>
+        <button class="btn btn-success" @click="setCredit" id="register-credit">Registrar Saldo</button>
 
     </section>
 `

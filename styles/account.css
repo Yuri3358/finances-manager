@@ -32,3 +32,25 @@
     margin-left: 3px;
     margin-right: 3px;
 }
+
+@media (max-width: 700px) {
+    #account-container {
+        height: 9cm;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .account-labels {
+        font-size: 24px;
+    }
+    
+    .account-inputs {
+        font-size: 22px
+    }
+
+    #register-account, #enter-account {
+        font-size: 20px;
+    }
+}

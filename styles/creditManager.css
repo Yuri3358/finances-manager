@@ -1,6 +1,6 @@
 #credit-container {
     width: 8cm;
-    height: 5cm;
+    height: 5.5cm;
     background-color: rgb(38, 38, 38);
     border: 1px groove black;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.27);
@@ -19,9 +19,28 @@
     display: flex;
     margin: auto;
     margin-bottom: 0.5cm;
+    text-align: center;
 }
 
 #register-credit {
     font-size: 15px;
     margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    #credit-container {
+        height: 6cm;
+    }
+
+    #credit-label {
+        font-size: 24px
+    }
+
+    #credit-input {
+        font-size: 22px;
+        width: 3cm;
+    }
+    #register-credit {
+        font-size: 20px;
+    }
 }

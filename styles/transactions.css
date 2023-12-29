@@ -40,3 +40,18 @@
     font-size: 15px;
     margin-top: 20px;
 }
+
+@media (max-width: 700px) {
+    #transactions-container {
+        height: 13cm;
+    }
+    .transactions-labels {
+        font-size: 26px;
+    }
+    .transactions-inputs {
+        font-size: 24px;
+    }
+    #register-transaction {
+        font-size: 20px;
+    }
+}
