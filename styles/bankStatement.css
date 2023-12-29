@@ -37,6 +37,10 @@ td {
     text-align: center;
 }
 
+#wealth {
+    filter: blur(8px);
+}
+
 @media (max-width: 700px) {
     .table {
         width: 10cm;

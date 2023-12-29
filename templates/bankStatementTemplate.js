@@ -1,5 +1,5 @@
 const bankStatementTemp = `
-    <h2 id="current-wealth">Saldo Atual: <span ref="wealth">{{currentWealth}}</span>
+    <h2 id="current-wealth">Saldo Atual: <span id="wealth" ref="wealth">{{currentWealth}}</span>
         <i class="bi bi-eye-slash-fill" @click="hideAccountCredit"></i>
     </h2>
     <div id="infos-container">
