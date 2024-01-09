@@ -17,7 +17,7 @@ const NavbarTemplate = `
                 </p>
 
                 <h2 id="account">
-                    <a class="anchors btn btn-ouline" href="#/account"><i class="bi bi-person-circle"></i> Usuário</a>
+                    <a class="anchors btn btn-ouline" href="#/account"><i class="bi bi-person-circle"></i> {{ accountEmail }}</a>
                 </h2>
             </ul>
         </div>

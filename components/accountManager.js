@@ -24,8 +24,9 @@ const accountManager = {
             if (this.email && this.password) {
                 const loginData = await autho.signInWithEmailAndPassword(this.email, this.password)
                 localStorage.setItem("userId",loginData.user.uid)
-                
+                localStorage.setItem("userEmail", loginData.user.email)
                 window.location.href = "#/credit"
+                window.location.reload()
             } else {
                 alert("Verifique as informações!")
             }
