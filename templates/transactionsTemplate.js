@@ -15,7 +15,10 @@ const transactionsTemp = `
             <option>Entrada</option>
             <option>Saída</option>
         </select>
-
+        <br/>
+        <label class="transaction-labels">Modificar saldo</label>
+        <input class="transaction-inputs" id="change-credit" type="checkbox" v-model="changeCredit">
+        <br/>
         <button id="register-transaction" class="btn btn-success" @click="addTransaction">Registrar Movimentação</button>
     </section>
 `

@@ -1,5 +1,5 @@
 #transactions-container {
-    width: 10cm;
+    width: 10.2cm;
     height: 11cm;
     background-color: rgb(38, 38, 38);
     border: 1px groove black;
@@ -36,9 +36,13 @@
     margin-bottom: 10px;
 }
 
-#register-transactions {
+#register-transaction {
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 12px;
+}
+
+#change-credit {
+    margin-left: 4px;
 }
 
 @media (max-width: 700px) {

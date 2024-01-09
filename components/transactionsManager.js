@@ -5,7 +5,8 @@ const transactions = {
             transaction: "",
             transactionValue: 0,
             transactionType: "",
-            date: ""
+            date: "",
+            changeCredit: false
         }
     },
     methods: {
@@ -36,11 +37,12 @@ const transactions = {
 
                 const currentWealth = await this.getCurrentWealth()
                 
-                await colRef.doc(userID).update({
-                    credit: currentWealth + this.transactionValue
-                })
-                
-                
+                if (this.changeCredit) {
+                    await colRef.doc(userID).update({
+                        credit: currentWealth + this.transactionValue
+                    })
+                }                
+
                 this.transaction = this.transactionValue = this.transactionType = this.date = ""
             } else {
                 alert("Verifique as Informações!")
