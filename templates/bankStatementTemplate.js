@@ -13,7 +13,7 @@ const bankStatementTemp = `
                 </thead>
 
                 <tbody>
-                    <tr v-for="transaction in this.transactionsList.value">
+                    <tr v-for="transaction in this.transactionsList.value" v-show="transaction.transaction">
                         <td>{{transaction.transaction}}</td>
                         <td>{{Number(transaction.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
                         <td>{{transaction.type}}</td>
