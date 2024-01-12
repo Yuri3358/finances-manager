@@ -16,8 +16,6 @@ const accountManager = {
 
                 await colRef.doc(credentials.user.uid).collection("transactions").add({})
 
-            } else {
-                alert("Verifique as informações!")
             }
         },
         async accountLogin() {
@@ -27,8 +25,6 @@ const accountManager = {
                 localStorage.setItem("userEmail", loginData.user.email)
                 window.location.href = "#/credit"
                 window.location.reload()
-            } else {
-                alert("Verifique as informações!")
             }
         }
     }
