@@ -8,17 +8,20 @@ const bankStatement = {
         }
     },
     mounted() {
+        this.hideAccountCredit()
         this.getAccountWealth()
         this.fetchTransactions()
     },
     methods: {
         hideAccountCredit() {
-            styleTarget =  this.$refs.wealth.style
+            styleWealth = this.$refs.wealth.style
+            styleTable = this.$refs.table.style
+
             if (this.isBlurred) {
-                styleTarget.filter = "blur(0px)"
+                styleWealth.filter = styleTable.filter = "blur(0px)"
                 this.isBlurred = false
             } else {
-                styleTarget.filter = "blur(8px)"
+                styleWealth.filter = styleTable.filter = "blur(8px)"
                 this.isBlurred = true
             }
         },
