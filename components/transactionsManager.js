@@ -20,7 +20,6 @@ const transactions = {
         async addTransaction() {
             const userID = localStorage.getItem("userId")
             
-            
             if (this.transaction && this.transactionValue && this.transactionType) {
                 if (!this.date) {
                     this.date = new Date().toISOString().slice(0, 10)
