@@ -10,12 +10,21 @@ async function handleNavigation() {
         }
     })
 }
+
+async function checkLogin() {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            window.location.href = "#/user"
+        }
+    })
+}
 const routes = [
     {path: "/", component: accountManager},
     {path: "/credit", component: creditManager, beforeEnter: () => handleNavigation()},
     {path: "/transactions", component: transactions, beforeEnter: () => handleNavigation()},
     {path: "/statement", component: bankStatement, beforeEnter: () => handleNavigation()},
-    {path: "/account", component: accountManager}
+    {path: "/account", component: accountManager, beforeEnter: () => checkLogin()},
+    {path: "/user", component: userPage, beforeEnter: () => handleNavigation()}
 ]
 
 const router = VueRouter.createRouter({

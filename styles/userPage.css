@@ -1,0 +1,28 @@
+#user-page-container {
+    user-select: none;
+}
+
+#page-marker {
+    text-align: center;
+}
+.alert {
+    padding: 2px;
+    width: 12cm;
+}
+
+.input-group {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#password-form {
+    width: 10cm;
+    margin-bottom: 5px;
+    margin-left: 1cm;
+    text-align: center;
+}
+
+.dangerzone-buttons {
+    margin-left: 3px;
+    margin-right: 3px;
+}
