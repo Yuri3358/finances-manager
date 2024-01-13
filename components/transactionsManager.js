@@ -6,7 +6,7 @@ const transactions = {
             transactionValue: 0,
             transactionType: "",
             date: "",
-            changeCredit: false
+            changeCredit: true
         }
     },
     methods: {
