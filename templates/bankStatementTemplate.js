@@ -1,5 +1,5 @@
 const bankStatementTemp = `
-    <h2 id="current-wealth">Saldo Atual: <span id="wealth" ref="wealth">{{currentWealth}}</span>
+    <h2 id="current-wealth">Saldo Atual: <span id="wealth" ref="wealth">{{currentWealth.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</span>
         <i class="bi bi-eye-slash-fill" @click="hideAccountCredit"></i>
     </h2>
     <div id="infos-container">
@@ -17,7 +17,7 @@ const bankStatementTemp = `
                         <td>{{transaction.transaction}}</td>
                         <td>{{Number(transaction.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
                         <td>{{transaction.type}}</td>
-                        <td>{{transaction.date}}</td>
+                        <td>{{transaction.date}} <i class="bi bi-x-square" @click="deleteTransaction(transaction.value, transaction.transactionId)"></i></td>
                     </tr>
                 </tbody>
                 </table>

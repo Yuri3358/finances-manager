@@ -29,16 +29,32 @@ const bankStatement = {
             const userID = localStorage.getItem("userId")
             const docData = await colRef.doc(userID).get()
             wealth = docData.data().credit
-            this.currentWealth = wealth.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+            this.currentWealth = wealth
+            return wealth
         },
         async fetchTransactions() {
             bankData = []
             const userID = localStorage.getItem("userId")
             const transactions = await colRef.doc(userID).collection("transactions").get()
 
-            transactions.forEach(doc => bankData.push(doc.data()))
-
+            transactions.forEach(doc => {
+                const transactions = doc.data()
+                transactions.transactionId = doc.id
+                bankData.push(transactions)
+            })
             this.transactionsList.value = bankData
+        },
+        async deleteTransaction(wealth, transId) {
+            const userID = localStorage.getItem("userId")
+            const currentWealth = await this.getAccountWealth()
+
+            colRef.doc(userID).collection("transactions").doc(transId).delete().then(() => {
+                colRef.doc(userID).update({
+                    credit: currentWealth - wealth
+                })
+            })
+            this.fetchTransactions()
+            this.getAccountWealth()
         },
         exportExcel(){
             const table = document.getElementById("transaction-table")
