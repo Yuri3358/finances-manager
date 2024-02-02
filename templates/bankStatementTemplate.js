@@ -17,7 +17,7 @@ const bankStatementTemp = `
                         <td>{{transaction.transaction}}</td>
                         <td>{{Number(transaction.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
                         <td>{{transaction.type}}</td>
-                        <td>{{transaction.date}} <i class="bi bi-x-square" @click="deleteTransaction(transaction.value, transaction.transactionId)"></i></td>
+                        <td>{{new Date(transaction.date).toLocaleString("pt-BR").slice(0, 10)}} <i class="bi bi-x-square" @click="deleteTransaction(transaction.value, transaction.transactionId)"></i></td>
                     </tr>
                 </tbody>
                 </table>
