@@ -41,6 +41,7 @@ const bankStatement = {
                 const transactions = doc.data()
                 transactions.transactionId = doc.id
                 bankData.push(transactions)
+                bankData.sort((a, b) => new Date(b.date) - new Date(a.date))
             })
             this.transactionsList.value = bankData
         },
