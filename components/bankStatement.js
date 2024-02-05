@@ -13,6 +13,12 @@ const bankStatement = {
         this.fetchTransactions()
     },
     methods: {
+        formatToCurrency(transactionValue) {
+            return Number(transactionValue).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+        },
+        formatToDate(isoDate) {
+            return new Date(isoDate).toLocaleString("pt-BR").slice(0, 10)
+        },
         hideAccountCredit() {
             styleWealth = this.$refs.wealth.style
             styleTable = this.$refs.table.style
