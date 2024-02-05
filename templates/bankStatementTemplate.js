@@ -8,15 +8,13 @@ const bankStatementTemp = `
                 <thead>
                     <th>Transação</th>
                     <th>Quantia</th>
-                    <th>Tipo</th>
                     <th>Data</th>
                 </thead>
 
                 <tbody ref="table">
                     <tr v-for="transaction in this.transactionsList.value" v-show="transaction.transaction">
                         <td>{{transaction.transaction}}</td>
-                        <td>{{Number(transaction.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
-                        <td>{{transaction.type}}</td>
+                        <td :style="{color: transaction.value < 0 ? 'red' : 'green'}">{{Number(transaction.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}}</td>
                         <td>{{new Date(transaction.date).toLocaleString("pt-BR").slice(0, 10)}} <i class="bi bi-x-square" @click="deleteTransaction(transaction.value, transaction.transactionId)"></i></td>
                     </tr>
                 </tbody>
